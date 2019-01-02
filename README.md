@@ -1,2 +1,2 @@
 # factorial
-Fixing the factorial from Pisan343 Repository
+Calculate factorial and test it using CATCH

@@ -24,7 +24,7 @@
 int Factorial(int number) {
     //0! = 1 so this is a secondary base case for the factorial function
     if(number == 0) return 1;
-    //this ensures that the function does not exceed the capacity of integer
+        //this ensures that the function does not exceed the capacity of integer
     else if(number >= 13) return number;
     //fixing typo each recursion iteration is to go down by 1 and not 3
     return number <= 0  ? number : Factorial(number - 1) * number;
@@ -33,18 +33,18 @@ int Factorial(int number) {
 // Simple CATCH tests for factorial
 // TODO: ADD more tests once it is fixed
 TEST_CASE("factorial tests") {
-REQUIRE(Factorial(1) == 1);
+    REQUIRE(Factorial(1) == 1);
 //Adding test cases at boundaries
 // -- Negative Partition Boundaries INT_MIN and -1
-REQUIRE(Factorial(-2147483648) == -2147483648);
-REQUIRE(Factorial(-1) == -1);
+    REQUIRE(Factorial(-2147483648) == -2147483648);
+    REQUIRE(Factorial(-1) == -1);
 // -- Valid factorial partition of test cases (0, 1 (initial test) and 12 [before overflow])
-REQUIRE(Factorial(0) == 1);
-REQUIRE(Factorial(12) == 479001600);
-
+    REQUIRE(Factorial(0) == 1);
+    REQUIRE(Factorial(12) == 479001600);
+ 
 // -- Overflow partition (13 and INT_MAX)
-REQUIRE(Factorial(13) == 13);
-REQUIRE(Factorial(2147483647) == 2147483647);
+    REQUIRE(Factorial(13) == 13);
+    REQUIRE(Factorial(2147483647) == 2147483647);
 }
 
 #ifndef CATCH_CONFIG_MAIN

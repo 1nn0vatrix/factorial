@@ -41,7 +41,7 @@ TEST_CASE("factorial tests") {
 // -- Valid factorial partition of test cases (0, 1 (initial test) and 12 [before overflow])
     REQUIRE(Factorial(0) == 1);
     REQUIRE(Factorial(12) == 479001600);
- 
+
 // -- Overflow partition (13 and INT_MAX)
     REQUIRE(Factorial(13) == 13);
     REQUIRE(Factorial(2147483647) == 2147483647);
